@@ -1,5 +1,4 @@
-<?
-	echo "
+
     <html>
          <head>
           <title>Регистрация и авторизация</title>
@@ -10,5 +9,4 @@
 		<a href="reg.php">Регистрация</a>
           </body>
          </html>
-         "
-?>
+         

@@ -1,5 +1,4 @@
-<?
-	echo "
+
 		<html>
          <head>
           <title>Регистрация</title>
@@ -14,5 +13,4 @@
            </form>
           </body>
          </html>
-         "
-?>
+         

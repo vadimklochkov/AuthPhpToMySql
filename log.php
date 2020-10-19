@@ -8,10 +8,16 @@ ini_set('display_startup_errors', 1);
     echo "Подключение невозможно: ".mysqli_connect_error();
   }
   //методом пост вписываем данные пользователя
-  $Ulogin = $_POST['login'];
-  $Upassword = $_POST['password'];
+  $login = $_POST['login'];
+  $password = $_POST['password'];
+  if (empty($login) && empty($password))
+  {
+	echo "Заполнены не все поля";
+  	die;
+  }
+  $password = md5($password);
   		//делаем масив который содержит пароль с определённого логина
-		$result = $mysqli->query ("SELECT 'password' FROM `users` WHERE `first_name` LIKE '$Ulogin' AND `password` LIKE '$Upassword'");
+		$result = $mysqli->query ("SELECT 'login' FROM `users` WHERE `first_name` = '$login' AND `password` = '$password' LIMIT 1  ");
 		$user = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
 //Если база данных вернула не пустой ответ - значит пара логин-пароль правильная
 

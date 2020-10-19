@@ -1,8 +1,7 @@
-<?
-  echo "
+
     <html>
          <head>
-          <title>Регистрация</title>
+          <title>Авторизация</title>
          </head>
           <body>         
            <form name="autorization"  action="log.php" method="POST">
@@ -12,5 +11,4 @@
            </form>
           </body>
          </html>
-         "
-?>
+         
